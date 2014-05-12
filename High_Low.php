@@ -1,12 +1,9 @@
 <?php
 
-// computer must generate a random folder 
-rand (1 ,100);
-
-$number = rand (1, 100);
-
 // ask user to guess number between 1-100
-fwrite(STDOUT, 'Hello Codeup, guess a number between 1-100 ');
+fwrite(STDOUT, 'Hello Codeup, guess a number between ' . $argv[1] . '-' . $argv[2]);
+
+$number = mt_rand($argv[1], $argv[2]);
 
 // get the input (number) from user
 $guess = fgets(STDIN);

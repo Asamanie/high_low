@@ -29,4 +29,7 @@ while ($guess != $number) {
 }
 
 //if the guess and the $number are the same say "You have..." and end the game
-echo "You have guessed correclty in $times_guessed times, play again!\n" ;
+echo "You have guessed correct in $times_guessed times, play again!\n" ;
+
+exit (0);
+

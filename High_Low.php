@@ -1,5 +1,8 @@
 <?php
 
+if (!is_numeric($argv[1]) || !is_numeric($argv[2]))
+	exit (1);
+
 // ask user to guess number between 1-100
 fwrite(STDOUT, 'Hello Codeup, guess a number between ' . $argv[1] . '-' . $argv[2]);
 

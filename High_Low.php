@@ -10,7 +10,7 @@ fwrite(STDOUT, 'Hello Codeup, guess a number between 1-100 ');
 
 // get the input (number) from user
 $guess = fgets(STDIN);
-$times_guessed = 0;
+$times_guessed = 1;
 
 // check to see if guess is correct 
 while ($guess != $number) {

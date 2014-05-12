@@ -6,9 +6,10 @@ if (!is_numeric($argv[1]) || !is_numeric($argv[2]))
 // ask user to guess number between 1-100
 fwrite(STDOUT, 'Hello Codeup, guess a number between ' . $argv[1] . '-' . $argv[2]);
 
+// $argv[1] is min. $argv [2] is max
 $number = mt_rand($argv[1], $argv[2]);
 
-// get the input (number) from user
+// get the input (number) from user, will not run until user inputs (number)
 $guess = fgets(STDIN);
 $times_guessed = 1;
 

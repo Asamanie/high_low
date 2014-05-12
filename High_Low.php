@@ -18,15 +18,14 @@ while ($guess != $number) {
 
 	// if the guess is higher than $number then tell the user "lower"
 	if ($guess > $number) {
-	echo "Lower\n";
-	$guess = fgets(STDIN);
+		echo "Lower\n";
+		$guess = fgets(STDIN);
 
 	// if the guess is lower than the $number then tell the user "higher"
-	} 
-	elseif ($guess < $number) {	
-	echo "Higher\n";
-	$guess = fgets(STDIN);
- }
+	} elseif ($guess < $number) {	
+		echo "Higher\n";
+		$guess = fgets(STDIN);
+	}
 }
 
 //if the guess and the $number are the same say "You have..." and end the game

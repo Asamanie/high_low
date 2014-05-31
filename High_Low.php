@@ -1,6 +1,6 @@
 <?php
 
-// tell user to guess a number bewtwwen 1-100
+// tell user to guess a number bewtween 1-100
 fwrite(STDOUT, "Guess a number between 1 and 100 \n");
 
 // generate a random number between 1-100
@@ -8,18 +8,25 @@ $number = mt_rand(1,100);
 // get input from user
 $guess = fgets(STDIN);
 
-// loop through until number is guessed correctly (or until statement is TRUE)
+// keep track of the number of guesses
+$times_guessed = 1;
+
+// loop through until number is guessed correctly AKA: until statement is TRUE
 while ($guess != $number) {
+	$times_guessed++;
 
 	if ($guess < $number) {
 		echo "Higher\n";
 		$guess = fgets(STDIN);
+		
 	} elseif ($guess > $number) {
 		echo "Lower\n";
 		$guess = fgets(STDIN);
+		
 	}	
 }
-echo "You have guessed correctly!\n";	
+// tell the user they guessed correclty and how many times it took user to guess
+echo "You guessed correctly in $times_guessed times!\n";	
 
 
 
